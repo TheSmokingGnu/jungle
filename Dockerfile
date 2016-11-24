@@ -22,7 +22,7 @@ RUN bower install --config.interactive=false --allow-root
 
 # currently only works for development
 ENV NODE_ENV development
-ENV KONGURL http://localhost:8001
+ENV KONGURL http://kong:8001
 
 RUN echo "'use strict'; angular.module('core').constant('KONGURL', ['$KONGURL']);" > modules/core/config/core.client.constants.js
 
